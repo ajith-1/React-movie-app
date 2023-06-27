@@ -1,0 +1,30 @@
+.pagination-box{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.pagination{
+    display: flex;
+    list-style: none;
+}
+.page-item{
+    padding:0 8px;
+    margin: 0 3px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.page-next{
+    background-color: #34a853;
+    padding:0 8px;
+    margin: 0 3px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.page-item:hover ,.active{
+    background-color: #34a853;
+}
+@media screen and (max-width: 768px) {
+    .pagination{
+        margin-right: 40px;
+    }
+}

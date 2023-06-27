@@ -1,0 +1,95 @@
+.header {
+  height: 40vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #04152dd3;
+  
+}
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to top, #04152d, #04152d00);
+}
+.header-box{
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  position: absolute;
+  top: 25vh;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.header-box .header-title{
+  font-size: 30px;
+  font-weight: 500;
+}
+.show h3{
+  border-left: 4px solid white;
+  padding-left: 10px;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+ .selectGenre .react-select__control{
+  background-color: #000a18;
+  color: #ffff;
+  border-radius: 20px;
+  max-width: 500px;
+  min-width: 350px;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  
+}
+.selectGenre .react-select__option{
+ color: #000000;
+}
+
+.selectGenre .react-select__multi-value{
+  background-color: #052450;
+  color: #ffff;
+  border-radius: 15px;
+}
+.selectGenre .react-select__multi-value__label{
+  color: #ffff;
+}
+.selectGenre .react-select__multi-value__remove:hover{
+  background-color: transparent;
+  color: #ffff;
+
+}
+@media screen and (max-width: 768px) {
+
+  .header-box{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: 12vh;
+   
+  }
+  .header-box .header-title{
+    margin-bottom: 30px;
+    font-size: 25px;
+  }
+
+
+
+}

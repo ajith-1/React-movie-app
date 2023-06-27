@@ -1,0 +1,63 @@
+.banner {
+  height: 70vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #04152d9c;
+
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to top, #04152d, #04152d00);
+}
+
+.box {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+  flex-direction: column;
+  color: #ffffff
+}
+
+.heading {
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.box p {
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width:768px) {
+  .heading {
+    font-size: 38px;
+  }
+
+  .box p {
+    font-size: 18px;
+  }
+
+}

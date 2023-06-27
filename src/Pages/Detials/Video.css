@@ -1,0 +1,149 @@
+.videosSection {
+  margin: 20px 0 0 20px;
+}
+
+.videosSection .sectionHeading {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.videosSection .videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.videoItem {
+  width: 23%;
+}
+
+.videoItem .videoThumbnail {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.videoItem .videoThumbnail .videoImg {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.videoThumbnail:hover .videoImg {
+  opacity: 0.5;
+}
+
+.videoThumbnail:hover>.play {
+  visibility: visible;
+  top: 40%;
+}
+
+.videoItem .videoTitle {
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.play {
+  visibility: hidden;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 37%;
+  left: 45%;
+  transition: all 0.3s ease;
+
+}
+/* ------video Popup----- */
+.videoPopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9;
+}
+
+.videoPopup .opacityLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+.videoPopup .videoPlayer {
+  position: relative;
+  width: 800px;
+  aspect-ratio: 16/9;
+  background-color: white;
+  transform: scale(0.2);
+  transition: transform 250ms;
+}
+
+.videoPopup .videoPlayer .close {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  color: white;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.videoPopup.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.videoPopup.visible .opacityLayer {
+  opacity: 1;
+}
+
+.videoPopup.visible .videoPlayer {
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 768px) {
+  .videoItem {
+    width: 150px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .videosSection .videos {
+    gap: 10px;
+  }
+  .videoItem .videoTitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .play {
+    visibility: visible;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 28%;
+    left: 44%;
+  }
+  .videoPopup .videoPlayer {
+    width: 85%;
+  }
+  .videoPlayer .close {
+    width: 10px;
+    height: 10px;
+  }
+  
+}
