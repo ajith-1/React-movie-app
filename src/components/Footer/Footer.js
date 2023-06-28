@@ -9,10 +9,10 @@ function Footer() {
       <div class="social">
        <ul>
         <li>
-        <a href='https://github.com/ajith-1'><i class="icon ion-social-github"></i></a>
+        <a href='https://github.com/ajith-1' target='_blank' rel='noopener noreferrer'><i class="icon ion-social-github"></i></a>
         </li>
         <li>
-        <a href='https://www.linkedin.com/in/ajith-kumar-a4839b25a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BdCxMrSfITkOhta9KlaMqaQ%3D%3D'><i class="icon ion-social-linkedin"></i></a>
+        <a href='https://www.linkedin.com/in/ajith-kumar-a4839b25a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BdCxMrSfITkOhta9KlaMqaQ%3D%3D' rel="noopener noreferrer"><i class="icon ion-social-linkedin"></i></a>
         </li>
         <li>
       <i class="icon ion-social-twitter"></i>
