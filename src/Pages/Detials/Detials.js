@@ -7,15 +7,14 @@ import '../App.css';
 import '../Detials/Detials.css';
 import avatar from "../images/avatar.jpg";
 import poster from "../images/noPoster.jpg";
+import imdbIcon from "../images/imdb.png";
 import Video from './Video';
 import Cards from '../Cards/Cards';
 import Content from '../Content/Content';
 import Loader from '../Loader/Loader';
 
-
-
-
-const Detials = ({ show }) => {
+const Detials = () => {
+  
   const { url, key } = Api;
   const [movie, setMovie] = useState({});
   const [crew, setCrew] = useState([]);
@@ -68,7 +67,6 @@ const Detials = ({ show }) => {
       catch (error) {
         console.error(error);
       }
-
     };
     getVideo();
 
@@ -98,6 +96,7 @@ const Detials = ({ show }) => {
     };
     getSimilar();
     window.scroll(0, 0)
+
   }, [id, mediaType, key, url]);
 
   const director = crew.filter((f) => f.job === "Director");
@@ -133,7 +132,8 @@ const Detials = ({ show }) => {
                   (<span key={i} className="genres-item">{genre.name}</span>))}
               </div>
               <div className='rating'>
-                <span>TMDB : </span><span className='star'>&#9733; {parseFloat(rate).toFixed(1)} </span>
+                <span>TMDB : </span><span className='star'>&#9733; {parseFloat(rate).toFixed(1)}</span>
+                <span><a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel='noopener noreferrer'><img src={imdbIcon} alt='imdb icon' className='imdbIcon' /></a></span>
               </div>
               <div className='overview'>
                 <h3 className="heading">Overview</h3>

@@ -6,7 +6,7 @@ import { TvShow } from './Pages/TvShow/TvShow';
 import Detials from './Pages/Detials/Detials';
 import Movies from './Pages/Movies/Movies';
 import Search from './Pages/Search/Search';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Route path='/:mediaType/:id' element={<Detials />} />
         <Route path="/search/:query" element={<Search />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

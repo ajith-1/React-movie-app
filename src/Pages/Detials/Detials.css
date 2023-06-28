@@ -25,13 +25,15 @@
   height: 100px;
   background-image: linear-gradient(to top, #04152d, #04152d00);
 }
-
+.continer-detials{
+  position: absolute;
+  top: 20vh;
+}
 .content-box {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
-  position: absolute;
-  top: 20vh;
+ 
 }
 
 .left {
@@ -86,6 +88,10 @@
   background-color: #34a853;
 }
 
+.imdbIcon{
+  display: flex;
+}
+
 .content-box .right .overview {
   margin-bottom: 25px;
 }
@@ -136,7 +142,7 @@
 .cast-row {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin: 10px 0 0 10px;
 }
@@ -178,8 +184,21 @@
   .right {
     width: 100%;
   }
+  .content-box .left .posterImg {
+    width: 220px;
+    height: 320px;
+  }
   .content-box .right .title {
     font-size: 24px;
     line-height: 30px;
+  }
+  .cast_detial {
+    width: 90px;
+  }
+  
+  .castImage {
+    width: 90px;
+    height: 130px;
+    border-radius: 6px;
   }
 }

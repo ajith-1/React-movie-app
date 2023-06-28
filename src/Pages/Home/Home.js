@@ -24,7 +24,7 @@ export default function Home() {
     }
     getBanner();
 
-  }, []);
+  }, [url,key]);
 
 
   return (
@@ -77,7 +77,7 @@ export function Tabs({ endpoint, title }) {
     }
     getTabs();
 
-  }, [mediaType])
+  }, [mediaType,key,url,endpoint])
 
   const handleTabClick = (e) => {
     setCurrentTab(e.target.id);

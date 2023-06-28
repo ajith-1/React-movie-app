@@ -19,6 +19,16 @@
   align-items: center;
   justify-content: space-evenly;
 }
+.navbarHidden{
+  height: 4rem;
+  width: 100%;
+  z-index: 40;
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08);
+  position: fixed;
+  top: -80px;
+  transition: 0.3s ease-in;
+
+}
 .navbar-logo{
   display: flex;
   align-items: center;
